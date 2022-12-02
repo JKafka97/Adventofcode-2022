@@ -10,6 +10,6 @@ for line in Lines:
     resault = strategy[resault]  
 
     count += resault * 3 #lineární průběh => X == prohra, Y == remíza a Z == výhra
-    count +=  ((resault + elf) % 3) + 1  #
+    count +=  ((resault + elf) % 3) + 1  # podle výsledku vím jakou kartu jsem hrál
     
 print(count)
