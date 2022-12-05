@@ -1,8 +1,7 @@
 file1 = open('.\\5_day\\text.txt', 'r')
 Lines = file1.readlines()
 
-
-start = [["W", "D", "G", "B", "H", "R", "V"], 
+key = [["W", "D", "G", "B", "H", "R", "V"], 
          ["J", "N", "G", "C", "R", "F"],
          ["L", "S", "F", "H", "D", "N", "J"],
          ["J", "D", "S", "V"],
@@ -12,16 +11,13 @@ start = [["W", "D", "G", "B", "H", "R", "V"],
          ["S", "J", "R"],
          ["L", "G", "S", "R", "B", "N", "V", "M"]]
 
-
-
 for line in Lines:
     info = line.replace("\n", "").split(" ")
     number_of_elements = int(info[1])
     start_row = int(info[3])
     final_row = int(info[-1])
-    removed_symbols = start[start_row -1][:-number_of_elements-1:-1]
-    start[start_row -1] = start[start_row -1][:-number_of_elements]
-    for symbol in removed_symbols:
-        start[final_row - 1].append(symbol)
+    removed_symbols = key[start_row -1][:-number_of_elements-1:-1]
+    key[start_row -1] = key[start_row -1][:-number_of_elements]
+    key[final_row - 1] += removed_symbols
         
-print(start)
+print("".join([i[-1] for i in key]))
