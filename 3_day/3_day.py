@@ -8,7 +8,7 @@ score = 0
 alphabet = string.ascii_lowercase + string.ascii_uppercase
 
 for count, value in enumerate(alphabet):
-    my_dict[value] = count+1
+    my_dict[value] = count + 1
 
 for line in Lines:
     lenght = len(line)//2

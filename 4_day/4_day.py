@@ -9,6 +9,6 @@ for line in Lines:
     elf2_low, elf2_max = elf2.split("-")
     elf1_range = list(range(int(elf1_low), int(elf1_max) +1))
     elf2_range = list(range(int(elf2_low), int(elf2_max) +1))
-    if all( item in elf1_range for item in  elf2_range) or all( item in elf2_range for item in  elf1_range):
+    if all( item in elf1_range for item in elf2_range) or all( item in elf2_range for item in elf1_range):
         i += 1
 print(i)

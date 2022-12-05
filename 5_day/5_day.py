@@ -18,6 +18,6 @@ for line in Lines:
     final_row = int(info[-1])
     removed_symbols = key[start_row -1][:-number_of_elements-1:-1]
     key[start_row -1] = key[start_row -1][:-number_of_elements]
-    key[final_row - 1] += removed_symbols
+    key[final_row -1] += removed_symbols
         
 print("".join([i[-1] for i in key]))
